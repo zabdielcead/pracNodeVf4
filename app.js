@@ -1,9 +1,9 @@
 // instalamos npm i express
 const express = require('express')
 const app = express();
-const port = 9080;
 const hbs = require('hbs');
-
+require('dotenv').config();
+const port = process.env.PORT;
 //handle bars
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials', function(err) {});
